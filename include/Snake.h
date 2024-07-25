@@ -19,6 +19,9 @@ public:
     void move_snake();
     COORD get_pos();
     bool eaten(COORD food);
+
+    void grow()
+
 };
 
 #endif

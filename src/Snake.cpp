@@ -26,3 +26,5 @@ bool Snake::eaten(COORD food)
     if(pos.X == food.X && pos.Y == food.Y) return true;
     return false;
 }
+
+void Snake::grow() { len++; }
