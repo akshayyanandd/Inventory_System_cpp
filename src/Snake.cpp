@@ -1,24 +1,22 @@
-#ifndef SNAKE_H
-#define SNAKE_H
-#include <windows.h>
+#include "Snake.h"
 
+Snake::Snake(COORD pos,int vel){
+    this->pos = pos;
+    this->vel = vel;
+    len=1;
+    direction='n';
+}
+void Snake::change_dir(char dir) {direction=dir};
 
-class Snake
+void Snake::move_snake()
 {
-private:
-// this COORD is in windows.h
-    COORD pos;
-    int len;
-    int vel;
-    char direction;
-public:
+    switch(direction){
+        case 'u':pos.Y-=vel;break;
+        case 'd':pos.Y+=vel;break;
+        case 'l':pos.X-=vel;break;
+        case 'r':pos.X+=vel;break;
+    }
     
-    Snake(COORD pos,int vel);
-    
-    void change_dir(char dir);
-    void move_snake();
-    COORD get_pos();
-    
-};
+}
 
-#endif
+COORD Snake::get_pos(){return pos;}
