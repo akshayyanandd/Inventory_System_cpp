@@ -14,9 +14,10 @@ class Food
         COORD pos;
 
     public:
+    Food();
         void gen_food(); //this generate food
 
-        COORD get_pos();//this gets position of food
+        COORD get_pos();//this gets position of  food
 };
 
 #endif 

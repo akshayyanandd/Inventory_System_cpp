@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cstdlib>
 #include <conio.h> //this is to control the key stroke in the console
 #include "Snake.h"
+#include "Food.h"
 // MACROS
 
 
@@ -10,6 +10,7 @@
 
 using namespace std;
 Snake snake({WIDTH/2,HEIGHT/2},1);
+Food food;
 void board()
 {
     for (int i = 0; i < HEIGHT; i++)
@@ -42,6 +43,12 @@ int main()
            }
       }
       snake.move_snake();
+      if(snake.eaten(food.get_pos())){
+        food.gen_food();
+        snake.grow();
+      }
+
+
         // THIS IS FUNCTION OF WINDOWS.H AND IS USED TO REMOVE FLICKERING COMING FROM THE CLEARINING SCREEN
          //system("clr");
        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE) , { 0 , 0 });

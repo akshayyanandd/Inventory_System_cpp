@@ -20,3 +20,9 @@ void Snake::move_snake()
 }
 
 COORD Snake::get_pos(){return pos;}
+
+bool Snake::eaten(COORD food)
+{
+    if(pos.X == food.X && pos.Y == food.Y) return true;
+    return false;
+}
