@@ -38,3 +38,12 @@ void AddItem::on_btnSave_clicked()
     database.close();
 }
 
+
+void AddItem::on_btnReset_clicked()
+{
+    ui->txtItemName->clear();
+    ui->txtPrice->clear();
+    ui->txtQuantity->clear();
+    ui->txtSupplierID->clear();
+}
+

@@ -30,7 +30,7 @@ set(PROJECT_SOURCES
         findsupplier.h
         findsupplier.ui
         databaseheader.h
-
+        Resource.qrc
     )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -43,6 +43,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         finditem.h finditem.cpp finditem.ui
         findsupplier.h findsupplier.cpp findsupplier.ui
         databaseheader.h
+        Resource.qrc
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -15,6 +15,11 @@ public:
     explicit AddSupplier(QWidget *parent = nullptr);
     ~AddSupplier();
 
+private slots:
+    void on_btnSave_clicked();
+
+    void on_btmReset_clicked();
+
 private:
     Ui::AddSupplier *ui;
 };
